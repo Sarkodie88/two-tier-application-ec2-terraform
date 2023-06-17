@@ -13,7 +13,7 @@ instances = {
     instance_type   = "t2.micro"
     target_instance = "my-instance-1"
     tags = {
-      Name = "varnish-instance"
+      Name = "database-instance"
     }
   }
 
@@ -22,7 +22,7 @@ instances = {
     instance_type   = "t3.medium"
     target_instance = "my-instance-2"
     tags = {
-      Name = "magento-instance"
+      Name = "application-instance"
     }
   }
 }
@@ -31,22 +31,14 @@ instances = {
 
 target_groups = {
   "my-instance-1-target-group" = {
-    name            = "varnish-target-group"
+    name            = "application-target-group"
     port            = "80"
     target_instance = "my-instance-1"
     tags = {
-      Name = "varnish-target-group"
+      Name = "-target-group"
     }
   }
 
-  "my-instance-2-target-group" = {
-    name            = "magento-target-group"
-    port            = "80"
-    target_instance = "my-instance-2"
-    tags = {
-      Name = "magento-target-group"
-    }
-  }
 }
 
 
