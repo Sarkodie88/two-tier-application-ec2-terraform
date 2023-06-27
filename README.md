@@ -52,7 +52,7 @@ The configuration is designed to be easily customizable and extensible, allowing
 ## Enhancements
 The following modifications can be done to enhance the architectural design we currently have:
 - Use an Auto Scaling Group to create the instances for high availability.
-- Replace database instance with an RDS instance or AURORA DB.
+- Replace database instance with an RDS instance or Aurora DB.
 
 
 ## Contributing
