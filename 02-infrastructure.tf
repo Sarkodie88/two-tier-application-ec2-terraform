@@ -31,7 +31,7 @@ resource "aws_instance" "my_instance" {
 
   ami                  = each.value.ami
   instance_type        = each.value.instance_type
-  subnet_id            = aws_subnet.my_public_subnet.id
+  subnet_id            = aws_subnet.my_private_subnet.id
   tags                 = each.value.tags
   iam_instance_profile = aws_iam_instance_profile.my_instance_profile.name
   security_groups      = [aws_security_group.my_security_group.id]
@@ -139,6 +139,7 @@ resource "aws_lb_listener" "my_listener" {
 }
 
 
+# path based routing examples
 resource "aws_lb_listener_rule" "static_and_media" {
   listener_arn = aws_lb_listener.my_listener.arn
   # priority     = 100
