@@ -14,6 +14,8 @@ This is a Terraform boilerplate for setting up a very basic and fundamental two 
 - EC2 instances
 - Target Groups
 - Load balancer
+
+
 The configuration is designed to be easily customizable and extensible, allowing you to build on top of it to fit your specific needs.
 
 ## Prerequisites
